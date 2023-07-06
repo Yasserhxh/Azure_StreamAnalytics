@@ -1,0 +1,31 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "asa",
+            "request": "launch",
+            "name": "Local Input Run",
+            "localRunType": "LocalOnly",
+            "script": "${workspaceFolder}/wcmstream920/Transformation.asaql"
+        },
+        {
+            "type": "asa",
+            "request": "launch",
+            "name": "Live Input and Local Output Run",
+            "localRunType": "LiveInputOnly",
+            "script": "${workspaceFolder}/wcmstream920/Transformation.asaql",
+            "startTime": "2021-10-18T00:00:00.000Z"
+        },
+        {
+            "type": "asa",
+            "request": "launch",
+            "name": "Live Input and Live Output Run",
+            "localRunType": "LiveInputAndOutput",
+            "script": "${workspaceFolder}/wcmstream920/Transformation.asaql",
+            "startTime": "2021-10-18T00:00:00.000Z"
+        }
+    ]
+}

@@ -1,0 +1,53 @@
+﻿{
+  "nodes": [
+    {
+      "id": "input1_0",
+      "name": "input1",
+      "type": "Input",
+      "processorId": "input1#0$0",
+      "dataSourceType": "InputFile",
+      "partitionIds": [
+        0
+      ]
+    },
+    {
+      "id": "cosmosdb_cosmosdb_0",
+      "name": "cosmosdb",
+      "type": "Step",
+      "processorId": "cosmosdb#0$0",
+      "partitionIds": [
+        0
+      ],
+      "scriptPosition": {
+        "startLine": 1,
+        "startColumn": 1,
+        "startOffset": 0,
+        "endLine": 6,
+        "endColumn": 10,
+        "endOffset": 50
+      },
+      "inputTimeShift": "00:00:00"
+    },
+    {
+      "id": "cosmosdb-cosmosdb_0",
+      "name": "cosmosdb",
+      "type": "Output",
+      "processorId": "cosmosdb-cosmosdb#0$0",
+      "dataSourceType": "LocalOutput",
+      "partitionIds": [
+        0
+      ],
+      "inputTimeShift": "00:05:00"
+    }
+  ],
+  "edges": [
+    {
+      "source": "input1_0",
+      "target": "cosmosdb_cosmosdb_0"
+    },
+    {
+      "source": "cosmosdb_cosmosdb_0",
+      "target": "cosmosdb-cosmosdb_0"
+    }
+  ]
+}

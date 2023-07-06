@@ -1,0 +1,26 @@
+{
+    "name": "wcmstream920",
+    "startFile": "Transformation.asaql",
+    "configurations": [
+        {
+            "filePath": "JobConfig.json",
+            "subType": "JobConfig"
+        },
+        {
+            "filePath": "Outputs/CosmosDB.json",
+            "subType": "Output"
+        },
+        {
+            "filePath": "Inputs/devisfmc640.json",
+            "subType": "Input"
+        },
+        {
+            "filePath": "Inputs/fmc640tlk001.json",
+            "subType": "Input"
+        },
+        {
+            "filePath": "Inputs/Local_Input1.json",
+            "subType": "InputMock"
+        }
+    ]
+}

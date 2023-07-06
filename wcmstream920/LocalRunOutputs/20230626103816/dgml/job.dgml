@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DirectedGraph xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/vs/2009/dgml">
+  <Nodes>
+    <Node Id="resourceName" Label="resourceName" Group="Expanded" SubscriptionId="subscriptionId" TotalStreamingUnits="3" ActivityId="fda936bd-42b1-4903-8686-6eaac4df581d" OutputErrorPolicy="Stop" EventsOutOfOrderPolicy="Adjust" EventsOutOfOrderMaxDelayInMS="0" EventsLateArrivalMaxDelayInMS="0" />
+    <Node Id="streamingNode0" Label="streamingNode0" Group="Expanded" MemorySizeInMB="2048" />
+    <Node Id="cosmosdb-cosmosdb#0$0" Label="cosmosdb" ProcessorType="Output" ProcessorId="cosmosdb-cosmosdb#0$0" AdapterType="LocalOutput" PartitionIds="0" SerializerType="Json" InputTimeShift="00:05:00" />
+    <Node Id="cosmosdb#0$0" Label="cosmosdb" ProcessorType="Trill" ProcessorId="cosmosdb#0$0" InputTimeShift="00:00:00" />
+    <Node Id="input1#0$0" Label="input1" ProcessorType="Input" ProcessorId="input1#0$0" AdapterType="InputFile" PartitionIds="0" SerializerType="CustomClr" HasTimestampBy="False" />
+  </Nodes>
+  <Links>
+    <Link Source="resourceName" Target="streamingNode0" Category="Contains" />
+    <Link Source="streamingNode0" Target="cosmosdb-cosmosdb#0$0" Label="cosmosdb-cosmosdb#0$0" Category="Contains" />
+    <Link Source="cosmosdb-cosmosdb#0$0" Target="cosmosdb#0$0" />
+    <Link Source="streamingNode0" Target="cosmosdb#0$0" Label="cosmosdb#0$0" Category="Contains" />
+    <Link Source="cosmosdb#0$0" Target="input1#0$0" />
+    <Link Source="streamingNode0" Target="input1#0$0" Label="input1#0$0" Category="Contains" />
+  </Links>
+  <Properties />
+  <Categories />
+</DirectedGraph>

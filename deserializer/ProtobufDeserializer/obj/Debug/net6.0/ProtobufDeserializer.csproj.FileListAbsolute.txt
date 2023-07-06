@@ -1,0 +1,15 @@
+c:\Users\YasserBouaabane\OneDrive - ALEXSYS SOLUTIONS\.Net Project\Azure_StreamAnalytics\deserializer\ProtobufDeserializer\bin\debug\net6.0\ProtobufDeserializer.deps.json
+c:\Users\YasserBouaabane\OneDrive - ALEXSYS SOLUTIONS\.Net Project\Azure_StreamAnalytics\deserializer\ProtobufDeserializer\bin\debug\net6.0\ProtobufDeserializer.dll
+c:\Users\YasserBouaabane\OneDrive - ALEXSYS SOLUTIONS\.Net Project\Azure_StreamAnalytics\deserializer\ProtobufDeserializer\bin\debug\net6.0\ProtobufDeserializer.pdb
+c:\Users\YasserBouaabane\OneDrive - ALEXSYS SOLUTIONS\.Net Project\Azure_StreamAnalytics\deserializer\ProtobufDeserializer\bin\debug\net6.0\Google.Protobuf.dll
+c:\Users\YasserBouaabane\OneDrive - ALEXSYS SOLUTIONS\.Net Project\Azure_StreamAnalytics\deserializer\ProtobufDeserializer\bin\debug\net6.0\Microsoft.StreamAnalytics.dll
+c:\Users\YasserBouaabane\OneDrive - ALEXSYS SOLUTIONS\.Net Project\Azure_StreamAnalytics\deserializer\ProtobufDeserializer\obj\debug\net6.0\ProtobufDeserializer.csproj.AssemblyReference.cache
+c:\Users\YasserBouaabane\OneDrive - ALEXSYS SOLUTIONS\.Net Project\Azure_StreamAnalytics\deserializer\ProtobufDeserializer\obj\debug\net6.0\ProtobufDeserializer.GeneratedMSBuildEditorConfig.editorconfig
+c:\Users\YasserBouaabane\OneDrive - ALEXSYS SOLUTIONS\.Net Project\Azure_StreamAnalytics\deserializer\ProtobufDeserializer\obj\debug\net6.0\ProtobufDeserializer.AssemblyInfoInputs.cache
+c:\Users\YasserBouaabane\OneDrive - ALEXSYS SOLUTIONS\.Net Project\Azure_StreamAnalytics\deserializer\ProtobufDeserializer\obj\debug\net6.0\ProtobufDeserializer.AssemblyInfo.cs
+c:\Users\YasserBouaabane\OneDrive - ALEXSYS SOLUTIONS\.Net Project\Azure_StreamAnalytics\deserializer\ProtobufDeserializer\obj\debug\net6.0\ProtobufDeserializer.csproj.CoreCompileInputs.cache
+c:\Users\YasserBouaabane\OneDrive - ALEXSYS SOLUTIONS\.Net Project\Azure_StreamAnalytics\deserializer\ProtobufDeserializer\obj\debug\net6.0\ProtobufDeserializer.csproj.CopyComplete
+c:\Users\YasserBouaabane\OneDrive - ALEXSYS SOLUTIONS\.Net Project\Azure_StreamAnalytics\deserializer\ProtobufDeserializer\obj\debug\net6.0\ProtobufDeserializer.dll
+c:\Users\YasserBouaabane\OneDrive - ALEXSYS SOLUTIONS\.Net Project\Azure_StreamAnalytics\deserializer\ProtobufDeserializer\obj\debug\net6.0\refint\ProtobufDeserializer.dll
+c:\Users\YasserBouaabane\OneDrive - ALEXSYS SOLUTIONS\.Net Project\Azure_StreamAnalytics\deserializer\ProtobufDeserializer\obj\debug\net6.0\ProtobufDeserializer.pdb
+c:\Users\YasserBouaabane\OneDrive - ALEXSYS SOLUTIONS\.Net Project\Azure_StreamAnalytics\deserializer\ProtobufDeserializer\obj\debug\net6.0\ref\ProtobufDeserializer.dll

@@ -1,0 +1,13 @@
+{
+    "Name": "CosmosDB",
+    "DataSourceType": "DocumentDB",
+    "DocumentDbProperties": {
+        "AccountId": "wcmcosmosdb",
+        "AccountKey": null,
+        "Database": "ToDoList",
+        "ContainerName": "Items",
+        "DocumentId": null
+    },
+    "DataSourceCredentialDomain": "34718fa6-3745-439e-b014-04686b39b733.StreamAnalystics",
+    "ScriptType": "Output"
+}

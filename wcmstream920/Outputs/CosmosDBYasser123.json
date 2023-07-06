@@ -1,0 +1,13 @@
+{
+    "Name": "CosmosDBYasser123",
+    "DataSourceType": "DocumentDB",
+    "DocumentDbProperties": {
+        "AccountId": "wcmcosmosdb",
+        "AccountKey": "********",
+        "Database": "ToDoList",
+        "ContainerName": "items123",
+        "DocumentId": ""
+    },
+    "DataSourceCredentialDomain": "38286dde-3251-4bdc-a6be-660c81d2d784.StreamAnalystics",
+    "ScriptType": "Output"
+}

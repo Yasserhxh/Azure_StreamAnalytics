@@ -1,0 +1,21 @@
+{
+    "Name": "devisfmc640",
+    "Type": "Data Stream",
+    "DataSourceType": "IoT Hub",
+    "IoTHubProperties": {
+        "IotHubNamespace": null,
+        "Endpoint": "messages/events",
+        "SharedAccessPolicyName": "iothubowner",
+        "SharedAccessPolicyKey": "********",
+        "ConsumerGroupName": "$Default"
+    },
+    "DataSourceCredentialDomain": "e087dbd8-a148-414e-88ce-f06d705c6f23.StreamAnalystics",
+    "Serialization": {
+        "Type": "CustomClr",
+        "SerializationProjectPath": "../../deserializer/ProtobufDeserializer/ProtobufDeserializer.csproj",
+        "SerializationClassName": "ProtobufDeserializer.MessageBodyDeserializer",
+        "SerializationDllPath": "ProtobufDeserializer.dll"
+    },
+    "PartitionKey": null,
+    "ScriptType": "Input"
+}

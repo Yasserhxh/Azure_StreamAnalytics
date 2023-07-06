@@ -1,0 +1,21 @@
+{
+    "Name": "fmc640tlk001",
+    "Type": "Data Stream",
+    "DataSourceType": "IoT Hub",
+    "IoTHubProperties": {
+        "IotHubNamespace": "iothubwcm",
+        "Endpoint": "messages/events",
+        "SharedAccessPolicyName": "iothubowner",
+        "SharedAccessPolicyKey": "********",
+        "ConsumerGroupName": "$Default"
+    },
+    "DataSourceCredentialDomain": "122a0305-f659-4b2f-aa46-ba85dbb34af3.StreamAnalystics",
+    "Serialization": {
+        "Type": "Csv",
+        "Encoding": "UTF8",
+        "FieldDelimiter": ","
+    },
+    "PartitionKey": null,
+    "CompressionType": "None",
+    "ScriptType": "Input"
+}

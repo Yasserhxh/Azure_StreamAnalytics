@@ -1,0 +1,10 @@
+﻿{
+  "id": "d6a7198a-bc32-4ce8-9ba0-a48d2901a0c7",
+  "port": 20209,
+  "inputs": [
+    "devisfmc640"
+  ],
+  "outputs": [
+    "cosmosdb"
+  ]
+}

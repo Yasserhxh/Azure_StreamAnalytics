@@ -1,0 +1,10 @@
+﻿{
+  "id": "e78fe141-bc79-492a-8bd2-a69b7cac59c9",
+  "port": 21759,
+  "inputs": [
+    "Input1"
+  ],
+  "outputs": [
+    "cosmosdb"
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+  "contentVersion": "1.1.0.0",
+  "parameters": {
+    "Name": {
+      "value": "wcmstream920"
+    },
+    "Location": {
+      "value": "Central US"
+    },
+    "Tags": {
+      "value": {
+        "hidden-link:/Microsoft.StreamAnalytics/streamingjobs/settings": "{\"createdFrom\":\"CICD\"}"
+      }
+    },
+    "OutputStartMode": {
+      "value": "JobStartTime"
+    },
+    "OutputStartTime": {
+      "value": "2023-01-01T00:00:00Z"
+    },
+    "EventsOutOfOrderPolicy": {
+      "value": "Adjust"
+    },
+    "OutputErrorPolicy": {
+      "value": "Stop"
+    },
+    "EventsOutOfOrderMaxDelayInSeconds": {
+      "value": 0
+    },
+    "EventsLateArrivalMaxDelayInSeconds": {
+      "value": 5
+    },
+    "DataLocale": {
+      "value": "en-US"
+    },
+    "CompatibilityLevel": {
+      "value": "1.2"
+    },
+    "ContentStoragePolicy": {
+      "value": "SystemAccount"
+    },
+    "Transformation": {
+      "value": {
+        "StreamingUnits": 3
+      }
+    },
+    "Inputs_fmc640tlk001": {
+      "value": {
+        "DataSource": {
+          "IotHubNamespace": "iothubwcm",
+          "SharedAccessPolicyName": "iothubowner",
+          "Endpoint": "messages/events",
+          "ConsumerGroupName": "$Default"
+        }
+      }
+    },
+    "Inputs_fmc640tlk001_DataSource_SharedAccessPolicyKey": {
+      "value": null
+    },
+    "Outputs_CosmosDB": {
+      "value": {
+        "DataSource": {
+          "CollectionNamePattern": "Items",
+          "AccountId": "wcmcosmosdb",
+          "Database": "ToDoList"
+        }
+      }
+    },
+    "Outputs_CosmosDB_DataSource_AccountKey": {
+      "value": null
+    }
+  }
+}

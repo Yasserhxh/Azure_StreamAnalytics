@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DirectedGraph xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/vs/2009/dgml">
+  <Nodes>
+    <Node Id="resourceName" Label="resourceName" Group="Expanded" SubscriptionId="subscriptionId" TotalStreamingUnits="3" ActivityId="d6a7198a-bc32-4ce8-9ba0-a48d2901a0c7" OutputErrorPolicy="Stop" EventsOutOfOrderPolicy="Adjust" EventsOutOfOrderMaxDelayInMS="0" EventsLateArrivalMaxDelayInMS="0" />
+    <Node Id="streamingNode0" Label="streamingNode0" Group="Expanded" MemorySizeInMB="2048" />
+    <Node Id="cosmosdb-cosmosdb#0$0" Label="cosmosdb" Group="Expanded" ProcessorType="Output" ProcessorId="cosmosdb-cosmosdb#0$0" AdapterType="LocalOutput" PartitionIds="0" SerializerType="Json" InputTimeShift="00:10:00" />
+    <Node Id="cosmosdb#0$0" Label="cosmosdb" Group="Expanded" ProcessorType="Trill" ProcessorId="cosmosdb#0$0" InputTimeShift="00:00:00" />
+    <Node Id="cosmosdb#0$0\cosmosdb\cosmosdb_2" Label="cosmosdb" Group="Expanded" ProcessorType="Trill" ProcessorId="cosmosdb#0$0" QueryPlanNodeType="Output" />
+    <Node Id="cosmosdb#0$0\cosmosdb\devisfmc640_1" Label="devisfmc640" Group="Expanded" ProcessorType="Trill" ProcessorId="cosmosdb#0$0" QueryPlanNodeType="Input" />
+    <Node Id="cosmosdb#1$0" Label="cosmosdb" Group="Expanded" ProcessorType="Trill" ProcessorId="cosmosdb#1$0" InputTimeShift="00:00:00" />
+    <Node Id="cosmosdb#1$0\cosmosdb\cosmosdb_2" Label="cosmosdb" Group="Expanded" ProcessorType="Trill" ProcessorId="cosmosdb#1$0" QueryPlanNodeType="Output" />
+    <Node Id="cosmosdb#1$0\cosmosdb\devisfmc640_1" Label="devisfmc640" Group="Expanded" ProcessorType="Trill" ProcessorId="cosmosdb#1$0" QueryPlanNodeType="Input" />
+    <Node Id="cosmosdb#2$0" Label="cosmosdb" Group="Expanded" ProcessorType="Trill" ProcessorId="cosmosdb#2$0" InputTimeShift="00:00:00" />
+    <Node Id="cosmosdb#2$0\cosmosdb\cosmosdb_2" Label="cosmosdb" Group="Expanded" ProcessorType="Trill" ProcessorId="cosmosdb#2$0" QueryPlanNodeType="Output" />
+    <Node Id="cosmosdb#2$0\cosmosdb\devisfmc640_1" Label="devisfmc640" Group="Expanded" ProcessorType="Trill" ProcessorId="cosmosdb#2$0" QueryPlanNodeType="Input" />
+    <Node Id="cosmosdb#3$0" Label="cosmosdb" Group="Expanded" ProcessorType="Trill" ProcessorId="cosmosdb#3$0" InputTimeShift="00:00:00" />
+    <Node Id="cosmosdb#3$0\cosmosdb\cosmosdb_2" Label="cosmosdb" Group="Expanded" ProcessorType="Trill" ProcessorId="cosmosdb#3$0" QueryPlanNodeType="Output" />
+    <Node Id="cosmosdb#3$0\cosmosdb\devisfmc640_1" Label="devisfmc640" Group="Expanded" ProcessorType="Trill" ProcessorId="cosmosdb#3$0" QueryPlanNodeType="Input" />
+    <Node Id="cosmosdbMerger#0$0" Label="cosmosdbMerger" Group="Expanded" ProcessorType="Merger" ProcessorId="cosmosdbMerger#0$0" IsClosingShape="False" />
+    <Node Id="devisfmc640#0$0" Label="devisfmc640" Group="Expanded" ProcessorType="Input" ProcessorId="devisfmc640#0$0" AdapterType="InputIoTHub" PartitionIds="0" SerializerType="CustomClr" HasTimestampBy="False" />
+    <Node Id="devisfmc640#1$0" Label="devisfmc640" Group="Expanded" ProcessorType="Input" ProcessorId="devisfmc640#1$0" AdapterType="InputIoTHub" PartitionIds="1" SerializerType="CustomClr" HasTimestampBy="False" />
+    <Node Id="devisfmc640#2$0" Label="devisfmc640" Group="Expanded" ProcessorType="Input" ProcessorId="devisfmc640#2$0" AdapterType="InputIoTHub" PartitionIds="2" SerializerType="CustomClr" HasTimestampBy="False" />
+    <Node Id="devisfmc640#3$0" Label="devisfmc640" Group="Expanded" ProcessorType="Input" ProcessorId="devisfmc640#3$0" AdapterType="InputIoTHub" PartitionIds="3" SerializerType="CustomClr" HasTimestampBy="False" />
+  </Nodes>
+  <Links>
+    <Link Source="resourceName" Target="streamingNode0" Category="Contains" />
+    <Link Source="streamingNode0" Target="cosmosdb-cosmosdb#0$0" Label="cosmosdb-cosmosdb#0$0" Category="Contains" />
+    <Link Source="cosmosdb-cosmosdb#0$0" Target="cosmosdbMerger#0$0" />
+    <Link Source="streamingNode0" Target="cosmosdb#0$0" Label="cosmosdb#0$0" Category="Contains" />
+    <Link Source="cosmosdb#0$0" Target="devisfmc640#0$0" />
+    <Link Source="cosmosdb#0$0" Target="cosmosdb#0$0\cosmosdb\cosmosdb_2" Category="Contains" />
+    <Link Source="cosmosdb#0$0\cosmosdb\cosmosdb_2" Target="cosmosdb#0$0\cosmosdb\devisfmc640_1" Label="source" />
+    <Link Source="cosmosdb#0$0" Target="cosmosdb#0$0\cosmosdb\devisfmc640_1" Category="Contains" />
+    <Link Source="streamingNode0" Target="cosmosdb#1$0" Label="cosmosdb#1$0" Category="Contains" />
+    <Link Source="cosmosdb#1$0" Target="devisfmc640#1$0" />
+    <Link Source="cosmosdb#1$0" Target="cosmosdb#1$0\cosmosdb\cosmosdb_2" Category="Contains" />
+    <Link Source="cosmosdb#1$0\cosmosdb\cosmosdb_2" Target="cosmosdb#1$0\cosmosdb\devisfmc640_1" Label="source" />
+    <Link Source="cosmosdb#1$0" Target="cosmosdb#1$0\cosmosdb\devisfmc640_1" Category="Contains" />
+    <Link Source="streamingNode0" Target="cosmosdb#2$0" Label="cosmosdb#2$0" Category="Contains" />
+    <Link Source="cosmosdb#2$0" Target="devisfmc640#2$0" />
+    <Link Source="cosmosdb#2$0" Target="cosmosdb#2$0\cosmosdb\cosmosdb_2" Category="Contains" />
+    <Link Source="cosmosdb#2$0\cosmosdb\cosmosdb_2" Target="cosmosdb#2$0\cosmosdb\devisfmc640_1" Label="source" />
+    <Link Source="cosmosdb#2$0" Target="cosmosdb#2$0\cosmosdb\devisfmc640_1" Category="Contains" />
+    <Link Source="streamingNode0" Target="cosmosdb#3$0" Label="cosmosdb#3$0" Category="Contains" />
+    <Link Source="cosmosdb#3$0" Target="devisfmc640#3$0" />
+    <Link Source="cosmosdb#3$0" Target="cosmosdb#3$0\cosmosdb\cosmosdb_2" Category="Contains" />
+    <Link Source="cosmosdb#3$0\cosmosdb\cosmosdb_2" Target="cosmosdb#3$0\cosmosdb\devisfmc640_1" Label="source" />
+    <Link Source="cosmosdb#3$0" Target="cosmosdb#3$0\cosmosdb\devisfmc640_1" Category="Contains" />
+    <Link Source="streamingNode0" Target="cosmosdbMerger#0$0" Label="cosmosdbMerger#0$0" Category="Contains" />
+    <Link Source="cosmosdbMerger#0$0" Target="cosmosdb#0$0" />
+    <Link Source="cosmosdbMerger#0$0" Target="cosmosdb#1$0" />
+    <Link Source="cosmosdbMerger#0$0" Target="cosmosdb#2$0" />
+    <Link Source="cosmosdbMerger#0$0" Target="cosmosdb#3$0" />
+    <Link Source="streamingNode0" Target="devisfmc640#0$0" Label="devisfmc640#0$0" Category="Contains" />
+    <Link Source="streamingNode0" Target="devisfmc640#1$0" Label="devisfmc640#1$0" Category="Contains" />
+    <Link Source="streamingNode0" Target="devisfmc640#2$0" Label="devisfmc640#2$0" Category="Contains" />
+    <Link Source="streamingNode0" Target="devisfmc640#3$0" Label="devisfmc640#3$0" Category="Contains" />
+  </Links>
+  <Properties />
+  <Categories />
+</DirectedGraph>

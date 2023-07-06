@@ -1,0 +1,57 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "ProtobufDeserializer/1.0.0": {
+        "dependencies": {
+          "Google.Protobuf": "3.23.3",
+          "Microsoft.Azure.StreamAnalytics": "0.2.63905.1"
+        },
+        "runtime": {
+          "ProtobufDeserializer.dll": {}
+        }
+      },
+      "Google.Protobuf/3.23.3": {
+        "runtime": {
+          "lib/net5.0/Google.Protobuf.dll": {
+            "assemblyVersion": "3.23.3.0",
+            "fileVersion": "3.23.3.0"
+          }
+        }
+      },
+      "Microsoft.Azure.StreamAnalytics/0.2.63905.1": {
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.StreamAnalytics.dll": {
+            "assemblyVersion": "1.2.0.0",
+            "fileVersion": "1.2.63905.1"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "ProtobufDeserializer/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Google.Protobuf/3.23.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-CH/9X2w7zTYyZjGCMDlfi3ZaB1HZ3BM35XUm4WADcNWQuT5QttjE2BQ+ydSROaZ1JEJ5p7gh1LKIbf9hoWrFNA==",
+      "path": "google.protobuf/3.23.3",
+      "hashPath": "google.protobuf.3.23.3.nupkg.sha512"
+    },
+    "Microsoft.Azure.StreamAnalytics/0.2.63905.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-O6SXvYzDECgtCI2R7O68uD3dYJ0my5ocWKGT8V0OZ/yPIKnrs4BdS7D0Wg6/3yOTg2L4sim7CjB+LBrSSi0Y2A==",
+      "path": "microsoft.azure.streamanalytics/0.2.63905.1",
+      "hashPath": "microsoft.azure.streamanalytics.0.2.63905.1.nupkg.sha512"
+    }
+  }
+}

@@ -1,0 +1,6 @@
+SELECT
+    *
+INTO
+    CosmosDB
+FROM
+devisfmc640

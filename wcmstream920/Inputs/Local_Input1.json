@@ -1,0 +1,13 @@
+{
+    "Name": "Input1",
+    "Type": "Data Stream",
+    "DataSourceType": "Local Input",
+    "Serialization": {
+        "Type": "CustomClr",
+        "SerializationProjectPath": "../../deserializer/ProtobufDeserializer/ProtobufDeserializer.csproj",
+        "SerializationClassName": "ProtobufDeserializer.MessageBodyDeserializer",
+        "SerializationDllPath": "ProtobufDeserializer.dll"
+    },
+    "FilePath": "../../../../../Downloads/customHexa.txt",
+    "ScriptType": "InputMock"
+}

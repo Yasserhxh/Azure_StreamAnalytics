@@ -1,0 +1,132 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "contentVersion": "1.1.0.0",
+  "parameters": {
+    "Name": {
+      "type": "string"
+    },
+    "Location": {
+      "type": "string"
+    },
+    "Tags": {
+      "type": "object"
+    },
+    "OutputStartMode": {
+      "type": "string"
+    },
+    "OutputStartTime": {
+      "type": "string"
+    },
+    "EventsOutOfOrderPolicy": {
+      "type": "string"
+    },
+    "OutputErrorPolicy": {
+      "type": "string"
+    },
+    "EventsOutOfOrderMaxDelayInSeconds": {
+      "type": "int"
+    },
+    "EventsLateArrivalMaxDelayInSeconds": {
+      "type": "int"
+    },
+    "DataLocale": {
+      "type": "string"
+    },
+    "CompatibilityLevel": {
+      "type": "string"
+    },
+    "ContentStoragePolicy": {
+      "type": "string"
+    },
+    "Transformation": {
+      "type": "object"
+    },
+    "Inputs_fmc640tlk001": {
+      "type": "object"
+    },
+    "Inputs_fmc640tlk001_DataSource_SharedAccessPolicyKey": {
+      "type": "securestring"
+    },
+    "Outputs_CosmosDB": {
+      "type": "object"
+    },
+    "Outputs_CosmosDB_DataSource_AccountKey": {
+      "type": "securestring"
+    }
+  },
+  "resources": [
+    {
+      "type": "Microsoft.StreamAnalytics/StreamingJobs",
+      "apiVersion": "2017-04-01-preview",
+      "name": "[parameters('Name')]",
+      "location": "[parameters('Location')]",
+      "tags": "[parameters('Tags')]",
+      "properties": {
+        "sku": {
+          "name": "Standard"
+        },
+        "outputStartMode": "[parameters('OutputStartMode')]",
+        "outputStartTime": "[if(equals(parameters('OutputStartMode'),'CustomTime'), parameters('OutputStartTime'), json('null'))]",
+        "eventsOutOfOrderPolicy": "[parameters('EventsOutOfOrderPolicy')]",
+        "outputErrorPolicy": "[parameters('OutputErrorPolicy')]",
+        "eventsOutOfOrderMaxDelayInSeconds": "[parameters('EventsOutOfOrderMaxDelayInSeconds')]",
+        "eventsLateArrivalMaxDelayInSeconds": "[parameters('EventsLateArrivalMaxDelayInSeconds')]",
+        "dataLocale": "[parameters('DataLocale')]",
+        "compatibilityLevel": "[parameters('CompatibilityLevel')]",
+        "contentStoragePolicy": "[parameters('ContentStoragePolicy')]",
+        "transformation": {
+          "name": "Transformation",
+          "properties": {
+            "streamingUnits": "[parameters('Transformation').StreamingUnits]",
+            "query": "SELECT\r\n    *\r\nINTO\r\n    CosmosDB\r\nFROM\r\n    FMC920"
+          }
+        },
+        "inputs": [
+          {
+            "name": "fmc640tlk001",
+            "properties": {
+              "type": "Stream",
+              "datasource": {
+                "type": "Microsoft.Devices/IotHubs",
+                "properties": {
+                  "iotHubNamespace": "[parameters('Inputs_fmc640tlk001').DataSource.IotHubNamespace]",
+                  "sharedAccessPolicyName": "[parameters('Inputs_fmc640tlk001').DataSource.SharedAccessPolicyName]",
+                  "sharedAccessPolicyKey": "[parameters('Inputs_fmc640tlk001_DataSource_SharedAccessPolicyKey')]",
+                  "endpoint": "[parameters('Inputs_fmc640tlk001').DataSource.Endpoint]",
+                  "consumerGroupName": "[parameters('Inputs_fmc640tlk001').DataSource.ConsumerGroupName]"
+                }
+              },
+              "compression": {
+                "type": "None"
+              },
+              "serialization": {
+                "type": "Csv",
+                "properties": {
+                  "fieldDelimiter": ",",
+                  "encoding": "UTF8"
+                }
+              }
+            }
+          }
+        ],
+        "outputs": [
+          {
+            "name": "CosmosDB",
+            "properties": {
+              "datasource": {
+                "type": "Microsoft.Storage/DocumentDB",
+                "properties": {
+                  "collectionNamePattern": "[parameters('Outputs_CosmosDB').DataSource.CollectionNamePattern]",
+                  "accountId": "[parameters('Outputs_CosmosDB').DataSource.AccountId]",
+                  "accountKey": "[parameters('Outputs_CosmosDB_DataSource_AccountKey')]",
+                  "database": "[parameters('Outputs_CosmosDB').DataSource.Database]"
+                }
+              }
+            }
+          }
+        ],
+        "jobType": "Cloud"
+      }
+    }
+  ]
+}

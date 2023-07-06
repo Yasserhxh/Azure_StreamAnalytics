@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "t1y7yDcbOGSAJAMhcVfESJZTzVz96+fAx61IMdsKl1BXqL3XtpK2Fr9hSSI+ry45fWqmD0ZYVSpbP40EE7eezA==",
+  "success": true,
+  "projectFilePath": "c:\\Users\\YasserBouaabane\\OneDrive - ALEXSYS SOLUTIONS\\.Net Project\\Azure_StreamAnalytics\\deserializer\\ProtobufDeserializer\\ProtobufDeserializer.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\YasserBouaabane\\.nuget\\packages\\google.protobuf\\3.23.3\\google.protobuf.3.23.3.nupkg.sha512",
+    "C:\\Users\\YasserBouaabane\\.nuget\\packages\\microsoft.azure.streamanalytics\\0.2.63905.1\\microsoft.azure.streamanalytics.0.2.63905.1.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,210 @@
+﻿{
+  "nodes": [
+    {
+      "id": "devisfmc640_0",
+      "name": "devisfmc640",
+      "type": "Input",
+      "dataSourceType": "InputIoTHub",
+      "partitionIds": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "subNodes": [
+        {
+          "id": "devisfmc640_0_0",
+          "name": "devisfmc640",
+          "type": "Input",
+          "processorId": "devisfmc640#0$0",
+          "partitionIds": [
+            0
+          ]
+        },
+        {
+          "id": "devisfmc640_0_1",
+          "name": "devisfmc640",
+          "type": "Input",
+          "processorId": "devisfmc640#1$0",
+          "partitionIds": [
+            1
+          ]
+        },
+        {
+          "id": "devisfmc640_0_2",
+          "name": "devisfmc640",
+          "type": "Input",
+          "processorId": "devisfmc640#2$0",
+          "partitionIds": [
+            2
+          ]
+        },
+        {
+          "id": "devisfmc640_0_3",
+          "name": "devisfmc640",
+          "type": "Input",
+          "processorId": "devisfmc640#3$0",
+          "partitionIds": [
+            3
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cosmosdb_cosmosdb_0",
+      "name": "cosmosdb",
+      "type": "Step",
+      "partitionIds": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "scriptPosition": {
+        "startLine": 1,
+        "startColumn": 1,
+        "startOffset": 0,
+        "endLine": 6,
+        "endColumn": 15,
+        "endOffset": 55
+      },
+      "inputTimeShift": "00:00:00",
+      "subNodes": [
+        {
+          "id": "cosmosdb_cosmosdb_0_0",
+          "name": "cosmosdb",
+          "type": "Step",
+          "processorId": "cosmosdb#0$0",
+          "partitionIds": [
+            0
+          ]
+        },
+        {
+          "id": "cosmosdb_cosmosdb_0_1",
+          "name": "cosmosdb",
+          "type": "Step",
+          "processorId": "cosmosdb#1$0",
+          "partitionIds": [
+            1
+          ]
+        },
+        {
+          "id": "cosmosdb_cosmosdb_0_2",
+          "name": "cosmosdb",
+          "type": "Step",
+          "processorId": "cosmosdb#2$0",
+          "partitionIds": [
+            2
+          ]
+        },
+        {
+          "id": "cosmosdb_cosmosdb_0_3",
+          "name": "cosmosdb",
+          "type": "Step",
+          "processorId": "cosmosdb#3$0",
+          "partitionIds": [
+            3
+          ]
+        },
+        {
+          "id": "cosmosdbMerger_0_0",
+          "name": "cosmosdb",
+          "type": "Merger",
+          "processorId": "cosmosdbMerger#0$0",
+          "partitionIds": [
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cosmosdb-cosmosdb_0",
+      "name": "cosmosdb",
+      "type": "Output",
+      "processorId": "cosmosdb-cosmosdb#0$0",
+      "dataSourceType": "LocalOutput",
+      "partitionIds": [
+        0
+      ],
+      "inputTimeShift": "00:10:00"
+    }
+  ],
+  "edges": [
+    {
+      "source": "devisfmc640_0_0",
+      "target": "cosmosdb_cosmosdb_0_0"
+    },
+    {
+      "source": "devisfmc640_0",
+      "target": "cosmosdb_cosmosdb_0_0"
+    },
+    {
+      "source": "devisfmc640_0",
+      "target": "cosmosdb_cosmosdb_0"
+    },
+    {
+      "source": "devisfmc640_0_1",
+      "target": "cosmosdb_cosmosdb_0_1"
+    },
+    {
+      "source": "devisfmc640_0",
+      "target": "cosmosdb_cosmosdb_0_1"
+    },
+    {
+      "source": "devisfmc640_0_2",
+      "target": "cosmosdb_cosmosdb_0_2"
+    },
+    {
+      "source": "devisfmc640_0",
+      "target": "cosmosdb_cosmosdb_0_2"
+    },
+    {
+      "source": "devisfmc640_0_3",
+      "target": "cosmosdb_cosmosdb_0_3"
+    },
+    {
+      "source": "devisfmc640_0",
+      "target": "cosmosdb_cosmosdb_0_3"
+    },
+    {
+      "source": "devisfmc640_0_0",
+      "target": "cosmosdb_cosmosdb_0"
+    },
+    {
+      "source": "cosmosdb_cosmosdb_0_0",
+      "target": "cosmosdbMerger_0_0"
+    },
+    {
+      "source": "devisfmc640_0_1",
+      "target": "cosmosdb_cosmosdb_0"
+    },
+    {
+      "source": "cosmosdb_cosmosdb_0_1",
+      "target": "cosmosdbMerger_0_0"
+    },
+    {
+      "source": "devisfmc640_0_2",
+      "target": "cosmosdb_cosmosdb_0"
+    },
+    {
+      "source": "cosmosdb_cosmosdb_0_2",
+      "target": "cosmosdbMerger_0_0"
+    },
+    {
+      "source": "devisfmc640_0_3",
+      "target": "cosmosdb_cosmosdb_0"
+    },
+    {
+      "source": "cosmosdb_cosmosdb_0_3",
+      "target": "cosmosdbMerger_0_0"
+    },
+    {
+      "source": "cosmosdbMerger_0_0",
+      "target": "cosmosdb-cosmosdb_0"
+    },
+    {
+      "source": "cosmosdb_cosmosdb_0",
+      "target": "cosmosdb-cosmosdb_0"
+    }
+  ]
+}

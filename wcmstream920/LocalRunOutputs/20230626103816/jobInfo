@@ -1,0 +1,10 @@
+﻿{
+  "id": "fda936bd-42b1-4903-8686-6eaac4df581d",
+  "port": 19098,
+  "inputs": [
+    "Input1"
+  ],
+  "outputs": [
+    "cosmosdb"
+  ]
+}
